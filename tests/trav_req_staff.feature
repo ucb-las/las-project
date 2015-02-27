@@ -10,20 +10,26 @@ Feature: Drupal Create Travel or Development Request
     And I am at 'node/add/travel-form'
     #And I am on 'node/add/travel-form'
     Given I fill in "Activity title" with "Going Rogue"
-    And I select "Library professional development" from the suggestion "Activity Type"
-    And I fill in "Business purpose" with 'random text'
-    And I fill in 'URL of activity' with "http://www.example.com"
-    And I fill in 'Date' with '08/31/2013'
-    And I fill in 'Date' with '09/07/2013'
-    And I fill in 'City' with 'Berkeley'
-    And I fill in "Registration fees" with '200'
-    And I select "Yes" from the "Directly bill registration fees to UCB"
-    And I fill in "Airfare" with '1234.50'
-    And I select "Yes" from the "Directly bill airfare to UCB"
-    And I fill in "Hotel" with '700'
-    And I fill in "Meals and Incidentals" with '350'
-    And I press 'Save'
-    Then I should see 'has been created'
+    And I check the box "Library professional development"
+    #And I select "Library professional development" from the suggestion "Activity Type"
+    And I select the radio button "Me"
+    And I fill in "Business purpose" with "Heading out to the range for some lasso lessons"
+    And I fill in "URL" with "http://www.example.com"
+    And I fill in "Date" with "09/31/2015"
+    And I fill in "Date" with "09/07/2015"
+    And I fill in "City" with "Berkeley"
+    And I fill in "Registration fees" with "200"
+    And I select the radio button "Yes"
+    And I fill in "Airfare" with "1234.50"
+    And I select the radio button "Yes"
+    And I fill in "Hotel" with "700"
+    And I fill in "Meals and Incidentals" with "350"
+    And I fill in "Comment to Approver" with "Please approve me."
+    And I press "Request Review"
+    Then print last response
+    Then print current URL
+    Then I should see the text "has been created"
+
 
 
 
