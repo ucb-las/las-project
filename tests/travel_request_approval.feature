@@ -9,7 +9,7 @@ Feature: Drupal Create Travel or Development Request
     Given I am logged in as a user with the 'Staff' role
     And I am at 'node/add/travel-form'
     #And I am on 'node/add/travel-form'
-    When I fill in 'Activity title' with 'Going Rogue'
+    Given I fill in "Activity title" with "Going Rogue"
     And I select "Library professional development" from the suggestion "Activity Type"
     And I fill in "Business purpose" with 'random text'
     And I fill in 'URL of activity' with "http://www.example.com"
@@ -25,107 +25,6 @@ Feature: Drupal Create Travel or Development Request
     And I press 'Save'
     Then I should see 'has been created'
 
-  @tbd @supervisor
-  Scenario: Approve a travel request from a travel request node
-    Given I am logged in as a user with "supervisor" role
-    And I am on 'request/128'
-    When I select "unit head review"
-    And I press "Update workflow"
-    Then I should see "Request sent to unit head for approval"
 
-  @supervisor
-  Scenario: Deny a travel request from a travel request node
-    Given I am logged in as a user with "supervisor" role
-    And I am on 'request/128'
-    When I select "return to requestor"
-    And I press "Update workflow"
-    Then I should see "Request returned to requestor"
-    Then I should see "Email sent to joebob"
 
-  @unit_head
-  Scenario: Approve a travel request from a travel request node
-    Given I am logged in as a user with "unit head" role
-    And I am on 'request/128'
-    When I select "AUL/Director review"
-    And I press "Update workflow"
-    Then I should see "Request sent to AUL/Director for approval"
 
-  @unit_head
-  Scenario: Deny a travel request from a travel request node
-    Given I am logged in as a user with "unit head" role
-    And I am on 'request/128'
-    When I select "return to requestor"
-    And I press "Update workflow"
-    Then I should see "Request returned to requestor"
-    Then I should see "Email sent to joebob"
-
-  @aul_director
-  Scenario: Approve a travel request from a travel request node
-    Given I am logged in as a user with "AUL/Director" role
-    And requestor is "SDC eligible"
-    And I am on 'request/128'
-    When I select "SDC Chair review"
-    And I press "Update workflow"
-    Then I should see "Request sent to SDC Chair for approval"
-
-  @aul_director
-  Scenario: Deny a travel request from a travel request node
-    Given I am logged in as a user with "AUL/Director" role
-    And requestor is "SDC eligible"
-    And I am on 'request/128'
-    When I select "return to requestor"
-    And I press "Update workflow"
-    Then I should see "Request returned to requestor"
-    Then I should see "Email sent to joebob"
-
-  @aul_director
-  Scenario: Approve a travel request from a travel request node
-    Given I am logged in as a user with "AUL/Director" role
-    And requestor is not "SDC eligible"
-    And I am on 'request/128'
-    When I select "LBS review"
-    And I press "Update workflow"
-    Then I should see "Request sent to LBS for approval"
-
-  @aul_director
-  Scenario: Deny a travel request from a travel request node
-    Given I am logged in as a user with "AUL/Director" role
-    And requestor is not "SDC eligible"
-    And I am on 'request/128'
-    When I select "return to requestor"
-    And I press "Update workflow"
-    Then I should see "Request returned to requestor"
-    Then I should see "Email sent to joebob"
-
-  @sdc_chair
-  Scenario: Approve a travel request from a travel request node
-    Given I am logged in as a user with "SDC Chair" role
-    And I am on 'request/128'
-    When I select "LBS review"
-    And I press "Update workflow"
-    Then I should see "Request sent to LBS for approval"
-
-  @sdc_chair
-  Scenario: Deny a travel request from a travel request node
-    Given I am logged in as a user with "SDC Chair" role
-    And I am on 'request/128'
-    When I select "LBS review"
-    And I press "return to requestor"
-    Then I should see "Request returned to requestor"
-    Then I should see "Email sent to joebob"
-
-  @lbs
-  Scenario: Approve a travel request from a travel request node
-    Given I am logged in as a user with "LBS" role
-    And I am on 'request/128'
-    When I select "Approve"
-    And I press "Update workflow"
-    Then I should see "Email approval sent to joebob"
-
-  @lbs
-  Scenario: Deny a travel request from a travel request node
-    Given I am logged in as a user with "LBS" role
-    And I am on 'request/128'
-    When I select "Deny"
-    And I press "Update workflow"
-    Then I should see "Email denial sent to joebob"
