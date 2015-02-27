@@ -6,8 +6,9 @@ Feature: Drupal Create Travel or Development Request
 
   @api @wip @requestor
   Scenario: Create an travel request from the add travel request page
-    Given I am logged in as a user with the 'authenticated user' role
-    And I am on 'node/add/travel-form'
+    Given I am logged in as a user with the 'Staff' role
+    And I am at 'node/add/travel-form'
+    #And I am on 'node/add/travel-form'
     When I fill in 'Activity title' with 'Going Rogue'
     And I select "Library professional development" from the suggestion "Activity Type"
     And I fill in "Business purpose" with 'random text'
