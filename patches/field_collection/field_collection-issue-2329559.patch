@@ -1,0 +1,13 @@
+diff -r 2634d3e97831 field_collection.module
+--- a/field_collection.module	Sun Aug 31 21:56:01 2014 +0530
++++ b/field_collection.module	Mon Sep 01 05:39:33 2014 +0530
+@@ -1432,7 +1432,8 @@
+         // load.
+         if (empty($field_collection_item)) {
+           $field_collection_item = entity_create('field_collection_item', array('field_name' => $field_name));
+-          $field_collection_item->setHostEntity($element['#entity_type'], $element['#entity']);
++          if(!empty($element['#entity']))
++            $field_collection_item->setHostEntity($element['#entity_type'], $element['#entity']);
+         }
+ 
+         // Put our entity in the form state, so FAPI callbacks can access it.

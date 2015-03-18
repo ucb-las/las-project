@@ -1,0 +1,12 @@
+diff -r 2634d3e97831 field_collection_table.module
+--- a/field_collection_table.module	Sun Aug 31 21:56:01 2014 +0530
++++ b/field_collection_table.module	Mon Sep 01 05:39:17 2014 +0530
+@@ -306,3 +306,8 @@
+   }
+   return $element;
+ }
++
++function field_collection_table_form_field_ui_field_edit_form_alter(&$form, &$form_state) {
++  if(isset($form['#instance']) && isset($form['#instance']['widget']) && isset($form['#instance']['widget']['type']) && $form['#instance']['widget']['type'] == 'field_collection_table')
++    unset($form['instance']['default_value_widget']);
++}
