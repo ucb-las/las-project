@@ -8,4 +8,5 @@
 * field_collection:
   * https://www.drupal.org/node/1280568#comment-8835645
 * workflow:
+  * line 275 of `WorkflowTransition.php`: `$force = TRUE;`
   * line 271 of `WorkflowTransitionForm.php`: `if (true) {`
