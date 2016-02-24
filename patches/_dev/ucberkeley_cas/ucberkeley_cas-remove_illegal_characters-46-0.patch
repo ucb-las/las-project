@@ -1,0 +1,21 @@
+diff --git a/ucberkeley_cas.module b/ucberkeley_cas.module
+index 91521ce..bc780f9 100644
+--- a/ucberkeley_cas.module
++++ b/ucberkeley_cas.module
+@@ -365,3 +365,16 @@ EOT;
+ 
+   return $out;
+ }
++
++/**
++ * Implements hook_user_update().
++ *
++ * Remove illegal characters from account names when updated.
++ */
++function ucberkeley_cas_user_update(&$edit, $account, $category) {
++  $pattern = '/[^\x{80}-\x{F7} a-z0-9@_.\'-]/i';
++  if (preg_match($pattern, $account->name)) {
++    $account->name = preg_replace($pattern, '', $account->name);
++    user_save($account);
++  }
++}
