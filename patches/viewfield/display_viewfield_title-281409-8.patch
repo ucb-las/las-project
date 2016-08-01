@@ -1,0 +1,24 @@
+diff --git a/sites/all/modules/contrib/viewfield/viewfield.module b/sites/all/modules/contrib/viewfield/viewfield.module
+index 7c9cecd..ac1caad 100644
+--- a/sites/all/modules/contrib/viewfield/viewfield.module
++++ b/sites/all/modules/contrib/viewfield/viewfield.module
+@@ -136,6 +136,7 @@ function viewfield_field_formatter_view($entity_type, $entity, $field, $instance
+           '#view' => $view,
+           '#view_name' => $view_name,
+           '#view_display' => $view_display,
++          '#view_title' => isset($view->display[$view_display]->display_options['title']) ? $view->display[$view_display]->display_options['title']: NULL,
+           '#view_arguments' => $item['vargs'],
+           '#entity_type' => $entity_type,
+           '#entity_id' => $entity_id,
+@@ -212,8 +213,9 @@ function viewfield_post_render($content, $element) {
+  */
+ function theme_viewfield_formatter_default($variables) {
+   $element = $variables['element'];
+-
+-  return $element['#view']->preview($element['#view_display'], $element['#view_arguments']);
++  $view_title = $element['#view_title'];
++  $view_output = $element['#view']->preview($element['#view_display'], $element['#view_arguments']);
++  return '<div class="viewfield-wrapper"><h2 class="view-title">' . $view_title . '</h2><div class="view-output">' . $view_output . '</div></div>';
+ }
+ 
+ /**
