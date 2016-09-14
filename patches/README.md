@@ -1,7 +1,5 @@
 ### Other Patches
 
-* admin_menu:
-  * line 596: `$links[$key]['#weight'] = -49;`
 * autosave:
   * `autosave.js` line 2: `$(function(){`
   * `autosave.js` line -1: `});`

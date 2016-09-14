@@ -1,0 +1,13 @@
+diff --git a/sites/all/modules/contrib/admin_menu/admin_menu.module b/sites/all/modules/contrib/admin_menu/admin_menu.module
+index 795ad21..b46d09e 100644
+--- a/sites/all/modules/contrib/admin_menu/admin_menu.module
++++ b/sites/all/modules/contrib/admin_menu/admin_menu.module
+@@ -593,7 +593,7 @@ function admin_menu_admin_menu_output_build(&$content) {
+     // Otherwise make insert "Add content" as top-level category.
+     else {
+       $key = key($links);
+-      $links[$key]['#weight'] = -100;
++      $links[$key]['#weight'] = -49;
+       $content['menu'] += $links;
+     }
+   }
