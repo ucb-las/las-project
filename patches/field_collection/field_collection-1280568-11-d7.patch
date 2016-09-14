@@ -1,0 +1,13 @@
+diff --git a/sites/all/modules/contrib/field_collection/field_collection.module b/sites/all/modules/contrib/field_collection/field_collection.module
+index c8cf49f..51fa44c 100644
+--- a/sites/all/modules/contrib/field_collection/field_collection.module
++++ b/sites/all/modules/contrib/field_collection/field_collection.module
+@@ -1044,7 +1044,7 @@ function field_collection_field_attach_form($entity_type, $entity, &$form, &$for
+     $field = field_info_field($field_name);
+ 
+     if ($field['type'] == 'field_collection' && field_collection_hide_blank_items($field)
+-        && field_access('edit', $field, $entity_type) && $instance['widget']['type'] == 'field_collection_embed') {
++        && field_access('edit', $field, $entity_type)) {// && $instance['widget']['type'] == 'field_collection_embed') {
+ 
+       $element_langcode = $form[$field_name]['#language'];
+       if ($form[$field_name][$element_langcode]['#max_delta'] > 0) {
