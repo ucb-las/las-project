@@ -1,0 +1,26 @@
+diff --git a/sites/all/modules/contrib/workflow/includes/Entity/WorkflowTransition.php b/sites/all/modules/contrib/workflow/includes/Entity/WorkflowTransition.php
+index c06ceab..34193bd 100644
+--- a/sites/all/modules/contrib/workflow/includes/Entity/WorkflowTransition.php
++++ b/sites/all/modules/contrib/workflow/includes/Entity/WorkflowTransition.php
+@@ -272,7 +272,7 @@ class WorkflowTransition extends Entity {
+     $entity_type = $this->entity_type;
+     $entity_id = $this->entity_id;
+     $field_name = $this->field_name;
+-
++    $force = TRUE;
+ 
+     // Make sure $force is set in the transition, too.
+     if ($force) {
+diff --git a/sites/all/modules/contrib/workflow/includes/Form/WorkflowTransitionForm.php b/sites/all/modules/contrib/workflow/includes/Form/WorkflowTransitionForm.php
+index 371b106..1a865f9 100644
+--- a/sites/all/modules/contrib/workflow/includes/Form/WorkflowTransitionForm.php
++++ b/sites/all/modules/contrib/workflow/includes/Form/WorkflowTransitionForm.php
+@@ -268,7 +268,7 @@ class WorkflowTransitionForm { // extends FormBase {
+ 
+     // Show state formatter before the rest of the form,
+     // when transition is scheduled or widget is hidden.
+-    if ( (!$show_widget) || $transition->isScheduled() || $transition->isExecuted()) {
++    if (true) {//if ( (!$show_widget) || $transition->isScheduled() || $transition->isExecuted()) {
+       $form['workflow_current_state'] = workflow_state_formatter($entity_type, $entity, $field, $instance, $current_sid);
+       // Set a proper weight, which works for Workflow Options in select list AND action buttons.
+       $form['workflow_current_state']['#weight'] = -0.005;
