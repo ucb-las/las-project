@@ -1,8 +1,5 @@
 ### Other Patches
 
-* autosave:
-  * `autosave.js` line 2: `$(function(){`
-  * `autosave.js` line -1: `});`
 * views:
   * line 226 of `includes/handlers.inc`: `!empty($options['table']) ? $options['table'] : NULL,`
   * line 227 of `includes/handlers.inc`: `!empty($options['id']) ? $options['id'] : NULL`
