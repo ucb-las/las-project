@@ -1,0 +1,1281 @@
+ When /^I clone the(?:| "([^"]*)") repo$/
+    - Clone a project repository
+    # FeatureContext::iCloneTheRepo()
+
+ Then /^I should have a local copy of "([^"]*)"$/
+    # FeatureContext::iShouldHaveALocalCopyOf()
+
+ Then /^I should see the project$/
+    # FeatureContext::iShouldSeeTheProject()
+
+ When /^I search for "([^"]*)"$/
+    # FeatureContext::iSearchFor()
+
+ When /^I search sitewide for "([^"]*)"$/
+    # FeatureContext::iSearchSitewideFor()
+
+Given /^I am logged in as the "([^"]*)" with the password "([^"]*)"$/
+    - Authenticates a user.
+    # FeatureContext::iAmLoggedInAsWithThePassword()
+
+Given /^I am logged in as the "([^"]*)"$/
+    - Authenticates a user with password from configuration.
+    # FeatureContext::iAmLoggedInAs()
+
+Given /^I execute the commands$/
+    # FeatureContext::iExecuteTheCommands()
+
+ Then /^I should see the project name$/
+    # FeatureContext::iShouldSeeTheProjectName()
+
+ When /^I create a "([^"]*)" project$/
+    # FeatureContext::iCreateAProject()
+
+ Then /^I (?:|should )see project data$/
+    # FeatureContext::iShouldSeeProjectData()
+
+ When /^I visit the recent sandbox$/
+    # FeatureContext::iVisitTheRecentSandbox()
+
+ Then /^I(?:| should be able to) initialize the repository$/
+    - Requires the Expect library to supply password to ssh on the command line.
+    # FeatureContext::iInitializeTheRepository()
+
+Given /^I should not see the following <texts>$/
+    # FeatureContext::iShouldNotSeeTheFollowingTexts()
+
+Given /^I (?:should |)see the following <texts>$/
+    # FeatureContext::iShouldSeeTheFollowingTexts()
+
+Given /^I (?:should |)see the following <links>$/
+    # FeatureContext::iShouldSeeTheFollowingLinks()
+
+Given /^I should not see the following <links>$/
+    # FeatureContext::iShouldNotSeeTheFollowingLinks()
+
+ When /^I select "([^"]*)" from field "([^"]*)"$/
+    # FeatureContext::iSelectFromField()
+
+Given /^I enter "([^"]*)" for field "([^"]*)"$/
+    # FeatureContext::iEnterForField()
+
+ When /^I click on page "([^"]*)"$/
+    # FeatureContext::iClickOnPage()
+
+ When /^I click the table heading "([^"]*)"$/
+    # FeatureContext::iClickTheTableHeading()
+
+ Then /^I should see "([^"]*)" sorted in "([^"]*)" order$/
+    # FeatureContext::iShouldSeeSortedInOrder()
+
+ When /^I click on the feed icon$/
+    # FeatureContext::iClickOnTheFeedIcon()
+
+ Then /^I should see the (?:issue|text )(?:|"([^"]*)") in the feed$/
+    # FeatureContext::iShouldSeeTheTextInTheFeed()
+
+Given /^I should see at least "([^"]*)" feed item(?:|s)$/
+    # FeatureContext::iShouldSeeAtLeastFeedItems()
+
+Given /^I fill in "([^"]*)" with random text$/
+    # FeatureContext::iFillInWithRandomText()
+
+Given /^I fill in "([^"]*)" with a random address$/
+    # FeatureContext::iFillInWithARandomAddress()
+
+ Then /^I should see the random "([^"]*)" text$/
+    # FeatureContext::iShouldSeeTheRandomText()
+
+ When /^I see "([^"]*)"$/
+    # FeatureContext::iSee()
+
+Given /^I should see at least "([^"]*)" record(?:|s)$/
+    # FeatureContext::iShouldSeeAtLeastRecords()
+
+ Then /^I should see "([^"]*)" in the "([^"]*)" metadata$/
+    # FeatureContext::iShouldSeeInTheMetadata()
+
+ Then /^I should see the "([^"]*)" issue status$/
+    # FeatureContext::iShouldSeeTheIssueStatus()
+
+ Then /^I should not see "([^"]*)" in the "([^"]*)" metadata$/
+    # FeatureContext::iShouldNoteSeeInTheMetadata()
+
+ Then /^I wait for the suggestion box to appear$/
+    # FeatureContext::iWaitForTheSuggestionBoxToAppear()
+
+Given /^(?:|I )wait (?:|for )"([^"]*)" second(?:|s)$/
+    # FeatureContext::iWaitForSeconds()
+
+ When /^I click on a case study$/
+    # FeatureContext::iClickOnACaseStudy()
+
+Given /^I should see the link "(?P<link>[^"]*)" at the "(?P<position>[^"]*)" in the "(?P<region>[^"]*)"(?:| region)$/
+    # FeatureContext::iShouldSeeTheLinkAtTheInTheRightSidebar()
+
+ Then /^I should see(?:| at least) "(?P<count>\d+)" links in the "(?P<region>[^"]*)"(?:| region)$/
+    # FeatureContext::iShouldSeeAtLeastLinksInThe()
+
+ When /^I select the following <fields> with <values>$/
+    # FeatureContext::iSelectTheFollowingFieldsWithValues()
+
+ When /^I select "([^"]*)" from Project Type on Create Project page$/
+    # FeatureContext::iSelectFromProjectTypeOnCreateProjectPage()
+
+Given /^I should see "([^"]*)" under "([^"]*)"$/
+    # FeatureContext::iShouldSeeUnder()
+
+Given /^I should not see "([^"]*)" under "([^"]*)"$/
+    # FeatureContext::iShouldNotSeeUnder()
+
+Given /^I select "([^"]*)" from the suggestion "([^"]*)"$/
+    # FeatureContext::iSelectFromTheSuggestion()
+
+Given /^I download the "([^"]*)" file "([^"]*)"$/
+    # FeatureContext::iDownloadTheFile()
+
+ Then /^the md5 hash should match "(?P<md5hash>[^"]*)"$/
+    # FeatureContext::theMd5HashShouldMatch()
+
+ Then /^I should see assorted links under "([^"]*)"$/
+    # FeatureContext::shouldSeeAssortedLinksUnder()
+
+ Then /^I should see the following <subcategories> under "([^"]*)"$/
+    # FeatureContext::iShouldSeeTheFollowingSubcategoriesUnder()
+
+ Then /^I should not see the following <subcategories> under "([^"]*)"$/
+    # FeatureContext::iShouldNotSeeTheFollowingSubcategoriesUnder()
+
+ Then /^I expand the category "([^"]*)"$/
+    # FeatureContext::iExpandTheCategory()
+
+ Then /^I collapse the category "([^"]*)"$/
+    # FeatureContext::iCollapseTheCategory()
+
+ Then /^(?:I|I should) see at least "(?P<count>\d+)" link(?:|s) under the "(?P<tab>[^"]*)" tab$/
+    - Function to check whether the links exists under the news/specific tab
+    # FeatureContext::iShouldSeeAtleastLinksUnderTab()
+
+ When /^I select <option> from "([^"]*)" results will contain <text>$/
+    # FeatureContext::iSelectOptionFromResultsWillContainText()
+
+ When /^I click on "([^"]*)" of a commit$/
+    # FeatureContext::iClickOnOfACommit()
+
+Given /^I should see at least "([^"]*)" file(?:|s) in the list$/
+    # FeatureContext::iShouldSeeAtLeastFilesInTheList()
+
+Given /^I should see at least "([^"]*)" "([^"]*)" symbol(?:|s)$/
+    # FeatureContext::iShouldSeeAtLeastSymbol()
+
+Given /^I should see the commit message$/
+    # FeatureContext::iShouldSeeTheCommitMessage()
+
+ When /^I follow a post$/
+    # FeatureContext::iFollowAPost()
+
+ When /^I follow "([^"]*)" for a post$/
+    # FeatureContext::iFollowForAPost()
+
+Given /^all the checkboxes are selected$/
+    - Verifies that all checkboxes in a VBO view are selected.
+    # FeatureContext::allTheCheckboxesAreSelected()
+
+ Then /^none the checkboxes are selected$/
+    # FeatureContext::noneTheCheckboxesAreSelected()
+
+ When /^I check "([^"]*)" checkboxes to "([^"]*)"$/
+    # FeatureContext::iCheckCheckboxesTo()
+
+Given /^I should see at least "([^"]*)" committer(?:|s)$/
+    # FeatureContext::iShouldSeeAtLeastCommitters()
+
+Given /^I should see at least "([^"]*)" commit(?:|s)$/
+    # FeatureContext::iShouldSeeAtLeastCommits()
+
+ When /^I click the "([^"]*)" link for the new project$/
+    # FeatureContext::iClickTheLinkForTheNewProject()
+
+ When /^I click the "([^"]*)" link in the "([^"]*)" table$/
+    - Used where tables are only identifiable by caption.
+    # FeatureContext::iClickTheLinkInTheTable()
+
+ When /^I click the first project link in the "([^"]*)" table$/
+    - Used where tables are only identifiable by caption.
+    # FeatureContext::iClickTheLinkInTheTable()
+
+Given /^I should see that the project short name is readonly$/
+    # FeatureContext::iShouldSeeThatTheProjectShortNameIsReadonly()
+
+Given /^I should see project name in the first part of the heading$/
+    # FeatureContext::iShouldSeeProjectNameInTheFirstPartOfTheHeading()
+
+ Then /^the "([^"]*)" field should be "([^"]*)"$/
+    # FeatureContext::theFieldShouldBe()
+
+ Then /^I should see at least "([^"]*)" email (?:address|addresses)$/
+    # FeatureContext::iShouldSeeAtLeastEmailAddress()
+
+ Then /^I should see at least "([^"]*)" confirmed email (?:address|addresses)$/
+    # FeatureContext::iShouldSeeAtLeastConfirmedEmailAddress()
+
+ Then /^I should not see "([^"]*)" in the dropdown "([^"]*)"$/
+    - Function to check if an option is not present in the dropdown
+    # FeatureContext::iShouldNotSeeInTheDropdown()
+
+ When /^I upload the following <files> for "([^"]*)"$/
+    # FeatureContext::iUploadTheFollowingFilesFor()
+
+ Then /^I (?:should |)see (?:that |)the project was created$/
+    # FeatureContext::iCheckTheProjectIsCreated()
+
+Given /^I should see that the Sandbox checkbox is "([^"]*)"$/
+    # FeatureContext::iShouldSeeThatTheSandboxCheckboxIs()
+
+Given /^the field "([^"]*)" should be outlined in red$/
+    - Function to check if the field specified is outlined in red or not
+    # FeatureContext::theFieldShouldBeOutlinedInRed()
+
+Given /^I should see at least "([^"]*)" (?:reply|replies) for the post$/
+    # FeatureContext::iShouldSeeAtLeastRepliesForThePost()
+
+Given /^I should see at least "([^"]*)" new (?:reply|replies) for the post$/
+    # FeatureContext::iShouldSeeAtLeastNewRepliesForThePost()
+
+Given /^I should see updated for the post$/
+    # FeatureContext::iShouldSeeUpdatedForThePost()
+
+Given /^I should not see updated for the post$/
+    # FeatureContext::iShouldNotSeeUpdatedForThePost()
+
+ Then /^I (?:should |)see the following <tabs>$/
+    # FeatureContext::iShouldSeeTheFollowingTabs()
+
+ Then /^the page status should be "([^"]*)"$/
+    - Function to check the status of a book page.
+    # FeatureContext::thePageStatusShouldBe()
+
+ Then /^I should see that the tab "([^"]*)" is highlighted$/
+    # FeatureContext::iShouldSeeThatTheTabIsHighlighted()
+
+Given /^I should see the following <blocks> in the right sidebar$/
+    - Find the given list of blocks in the right sidebar region
+    # FeatureContext::iShouldSeeTheFollowingBlocksInTheRightSidebar()
+
+ Then /^I should see "([^"]*)" block in the right sidebar$/
+    - Find the block in the right side bar region
+    # FeatureContext::iShouldSeeBlockInTheRightSidebar()
+
+Given /^the background color of the status should be "([^"]*)"$/
+    - Function to check the background color of the status message on a book page.
+    # FeatureContext::theBackgroundColorOfTheStatusShouldBe()
+
+Given /^"([^"]*)" should not contain an input element$/
+    # FeatureContext::shouldNotContainAnImputElement()
+
+Given /^I should see the following <slides>$/
+    - Function to check the slide texts on the page.
+    # FeatureContext::iShouldSeeTheFollowingSlides()
+
+Given /^I should see the following <blocks> in the "([^"]*)" column$/
+    # FeatureContext::iShouldSeeTheFollowingBlocksInTheColumn()
+
+ Then /^I should see the following <blocks> in column "([^"]*)"$/
+    # FeatureContext::iShouldSeeTheBelowBlocksInColumn()
+
+ Then /^I (?:should |)see the following <blocklinks> in small boxes$/
+    - Check the existence of "Add links" for blocks
+    # FeatureContext::iShouldSeeTheFollowingBlocklinksInSmallBoxes()
+
+Given /^I should see at least "([^"]*)" record(?:|s) in "([^"]*)" table$/
+    - Check number of rows in a table - Add more cases if table/row class is different
+    # FeatureContext::iShouldSeeAtLeastRecordsInTable()
+
+ Then /^I should see the following <links> in column "([^"]*)" in "([^"]*)" table$/
+    - Checks the links displayed in a column for the tables of the type: Project/Sandbox Project/Project Issue
+    # FeatureContext::iShouldSeeTheFollowingLinksInColumnInTable()
+
+Given /^I click "([^"]*)" from "([^"]*)" table$/
+    - Visits the link inside a column of a table
+    # FeatureContext::iClickFromTable()
+
+Given /^I should see "([^"]*)" page$/
+    - Identify the page.
+    # FeatureContext::iShouldSeePage()
+
+Given /^I fill in "([^"]*)" with issue name$/
+    # FeatureContext::iFillInWithIssueName()
+
+Given /^I select project name from "([^"]*)"$/
+    # FeatureContext::iSelectProjectNameFrom()
+
+ Then /^I should see at least "([^"]*)" blocks(?: in column "([^"]*)"|)$/
+    - Use for checking the user dashboard
+    # FeatureContext::iShouldSeeAtLeastBlocks()
+
+ Then /^I should see at least "([^"]*)" items in block "([^"]*)"$/
+    # FeatureContext::iShouldSeeAtLeastItemsInBlock()
+
+ Then /^I should see the item "([^"]*)" in the block "([^"]*)"$/
+    # FeatureContext::iShouldSeeTheItemInTheBlock()
+
+ Then /^I drag the block "([^"]*)" onto "([^"]*)"$/
+    - Drag one block onto another one
+    # FeatureContext::iDragTheBlockOnto()
+
+ Then /^I drag the block "([^"]*)" onto column "([^"]*)"$/
+    # FeatureContext::iDragTheBlockOntoColumn()
+
+ Then /^I should not see the below <blocks> in column "([^"]*)"$/
+    # FeatureContext::iShouldNotSeeTheBelowBlocksInColumn()
+
+ Then /^I should see the block "([^"]*)" in column "([^"]*)" just "([^"]*)" the block "([^"]*)"$/
+    # FeatureContext::iShouldSeeTheBlockInColumnJustTheBlock()
+
+ Then /^I change the setting "([^"]*)" to "([^"]*)" for the block "([^"]*)" and save$/
+    # FeatureContext::iChangeTheSettingToForTheBlockAndSave()
+
+ Then /^I close the block "([^"]*)"$/
+    # FeatureContext::iCloseTheBlockFromDashboard()
+
+ Then /^I should not see the block$/
+    # FeatureContext::iShouldNotSeeTheBlock()
+
+ When /^I click the link "([^"]*)" to add$/
+    # FeatureContext::iClickTheLinkToAdd()
+
+ Then /^I should see the block "([^"]*)" in column "([^"]*)"(?:a|)$/
+    # FeatureContext::iShouldSeeTheBlockInColumn()
+
+Given /^I should see the following <icons> on the block "([^"]*)"$/
+    # FeatureContext::iShouldSeeTheFollowingOnTheBlock()
+
+ Then /^I should see the submitted user "([^"]*)"$/
+    # FeatureContext::iShouldSeeTheSubmittedUser()
+
+Given /^I create a book page$/
+    - Create a book page and store the title and URL
+    # FeatureContext::iCreateABookPage()
+
+ When /^I follow a random book page$/
+    - Use the title stored in the above function and follow the link
+    # FeatureContext::iFollowARandomBookPage()
+
+ When /^I follow the book page$/
+    - Use the title stored in the above function and follow the link
+    # FeatureContext::iFollowARandomBookPage()
+
+ When /^I am on the Maintainers tab$/
+    # FeatureContext::iAmOnTheMaintainersTab()
+
+ When /^I follow "([^"]*)" for the maintainer "([^"]*)"$/
+    # FeatureContext::iFollowForTheMaintainer()
+
+ When /^I assign the following <permissions> to the maintainer "([^"]*)"$/
+    # FeatureContext::iAssignTheFollowingPermissionsToTheMaintainer()
+
+ When /^I assign "([^"]*)" to the maintainer "([^"]*)"$/
+    # FeatureContext::iAssignToTheMaintainer()
+
+ When /^I unassign the following <permissions> from the maintainer "([^"]*)"$/
+    # FeatureContext::iUnassignTheFollowingPermissionsFromTheMaintainer()
+
+ When /^I unassign "([^"]*)" from the maintainer "([^"]*)"$/
+    # FeatureContext::iUnassignThePermissionFromTheMaintainer()
+
+Given /^I am on the (?:project|organization) page$/
+    # FeatureContext::iAmOnTheProjectPage()
+
+ When /^I visit the (?:project|organization) page$/
+    # FeatureContext::iAmOnTheProjectPage()
+
+ Then /^I create a new issue$/
+    # FeatureContext::iCreateANewIssue()
+
+Given /^I follow an issue of the project$/
+    # FeatureContext::iFollowAnIssueOfTheProject()
+
+ Then /^I should be able to push (?:a|one more) commit to the repository$/
+    - Step definition to be called immediately after initializing repo or cloning a repo
+    # FeatureContext::iShouldBeAbleToPushACommitToTheRepository()
+
+ Then /^I should see "([^"]*)" in the dropdown "([^"]*)"$/
+    - Function to check if an option is present in the dropdown
+    # FeatureContext::iShouldSeeInTheDropdown()
+
+ When /^I follow "([^"]*)" for version "([^"]*)"$/
+    # FeatureContext::iFollowForVersion()
+
+ When /^I download the "([^"]*)" file for version "([^"]*)"$/
+    # FeatureContext::iDownloadTheFileForVersion()
+
+ Then /^the downloaded file name should be "([^"]*)"$/
+    # FeatureContext::theDownloadedFileNameShouldBe()
+
+Given /^(?:that I|I) create(?:|d) a sandbox project$/
+    # FeatureContext::iCreatedASandboxProject()
+
+ When /^I promote the project$/
+    - Promote a sandbox project:
+    # FeatureContext::iPromoteTheProject()
+
+ Then /^I should have a local copy of (?:the|([^"]*)") project$/
+    # FeatureContext::iShouldHaveALocalCopyOfTheProject()
+
+ Then /^I should see an error$/
+    # FeatureContext::iShouldSeeAFatalError()
+
+ Then /^I should see the <users> with the following <permissions>$/
+    # FeatureContext::iShouldSeeTheUsersWithTheFollowingPermissions()
+
+Given /^I should see the <users> without the following <permissions>$/
+    # FeatureContext::iShouldSeeTheUsersWithoutTheFollowingPermissions()
+
+ Then /^I (?:|should )see the (?:issue|document|community spotlight) title$/
+    # FeatureContext::iShouldSeeTheTitle()
+
+Given /^I add (?:a|one more) comment to the issue$/
+    # FeatureContext::iAddACommentToTheIssue()
+
+ Then /^I should see the project link$/
+    # FeatureContext::iShouldSeeTheProjectLink()
+
+Given /^I should see "([^"]*)" commit(?:|s) for the project$/
+    # FeatureContext::iShouldSeeCommitsForTheProject()
+
+Given /^I fill in "([^"]*)" with a "([^"]*)" ssh key$/
+    # FeatureContext::iFillInWithASshKey()
+
+ When /^I follow "([^"]*)" for a key$/
+    # FeatureContext::iFollowForAKey()
+
+Given /^I generate a ssh key$/
+    # FeatureContext::iGenerateASshKey()
+
+Given /^I push "([^"]*)" commit(?:|s) to the repository$/
+    # FeatureContext::iPushCommitsToTheRepository()
+
+Given /^I (?:|should be able to) push "([^"]*)" commit(?:|s) to the repository$/
+    # FeatureContext::iPushCommitsToTheRepository()
+
+ Then /^I should not be able to push a commit to the repository$/
+    # FeatureContext::iShouldNotBeAbleToPushACommitToTheRepository()
+
+Given /^I am on the document page$/
+    # FeatureContext::iAmOnTheDocumentPage()
+
+ When /^I edit the document$/
+    # FeatureContext::iEditTheDocument()
+
+Given /^I should not see "([^"]*") in editor usernames$/
+    # FeatureContext::iShouldNotSeeInEditorUsernames()
+
+ Then /^the "([^"]*)" should match the (?:latest|first|usernames in the) revision(?:|s)$/
+    - Verify necessary data from Revisions tab
+    # FeatureContext::theShouldMatchTheRevision()
+
+Given /^I follow "([^"]*)" tab$/
+    # FeatureContext::iFollowTab()
+
+ Then /^I (?:|should )see the issue link$/
+    - Function to check for the issue link
+    # FeatureContext::iShouldSeeTheIssueLink()
+
+ When /^I click "([^"]*)" link$/
+    - Custom step definition to click a link that follows specific actions
+    # FeatureContext::iClickLink()
+
+ When /^I click the lhrd banner in the header$/
+    # FeatureContext::iClickTheLhrdBannerInTheHeader()
+
+Given /^I "([^"]*)" the default homepage setting$/
+    - Change home page setting value on user dashboard
+    # FeatureContext::changeDefaultHomepageSetting()
+
+Given /^there are no blocks on my dashboard$/
+    - Clear blocks from user dashboard
+    # FeatureContext::removeDashboardBlocks()
+
+ Then /^the count of "([^"]*)" should be greater than zero$/
+    # FeatureContext::theCountOfShouldBeGreaterThanZero()
+
+Given /^I should see community member photo$/
+    # FeatureContext::iShouldSeeCommunityMemberPhoto()
+
+ Then /^the <user> should have at least <count> commits$/
+    # FeatureContext::theUserShouldHaveAtLeastCountCommits()
+
+ Then /^the project should have the following <committers>$/
+    # FeatureContext::theProjectShouldHaveTheFollowingCommitters()
+
+Given /^I should see the case studies slideshow$/
+    # FeatureContext::iShouldSeeTheCaseStudiesSlideshow()
+
+ When /^I follow the tag "([^"]*)"$/
+    # FeatureContext::iFollowTheTag()
+
+ When /^I click on link "([^"]*)" under section "([^"]*)"$/
+    # FeatureContext::iClickOnLinkUnderSection()
+
+Given /^I follow the result under "([^"]*)"$/
+    # FeatureContext::iFollowTheResultUnder()
+
+Given /^I should see at least "([^"]*)" code commits$/
+    # FeatureContext::iShouldSeeAtLeastCodeCommits()
+
+ Then /^I should see the newest commits from commitlog$/
+    # FeatureContext::iShouldSeeTheNewestCommitsFromCommitlog()
+
+Given /^I follow a commit from the list$/
+    # FeatureContext::iFollowACommitFromTheList()
+
+Given /^I should see at least "([^"]*)" git developers$/
+    # FeatureContext::iShouldSeeAtLeastGitDevelopers()
+
+ When /^I create a case study$/
+    # FeatureContext::iCreateACaseStudy()
+
+Given /^I am on the case study page$/
+    # FeatureContext::iAmOnTheCaseStudyPage()
+
+ When /^I visit the case study page$/
+    # FeatureContext::iAmOnTheCaseStudyPage()
+
+ Then /^I (?:|should )see the case study page$/
+    # FeatureContext::iShouldSeeTheCaseStudyPage()
+
+Given /^I (?:select|check) "([^"]*)" radio button$/
+    # FeatureContext::iSelectRadioButton()
+
+ Then /^I should not see the random "([^"]*)" text$/
+    # FeatureContext::iShouldNotSeeTheRandomText()
+
+ Then /^I should see the breadcrumb "([^"]*)"$/
+    # FeatureContext::checkBreadcrumb()
+
+Given /^I should not see the breadcrumb "([^"]*)"$/
+    # FeatureContext::iShouldNotSeeTheBreadcrumb()
+
+ When /^I uncheck sandbox$/
+    # FeatureContext::iUncheckSandbox()
+
+Given /^I create "([^"]*)" page(?:|s)$/
+    # FeatureContext::iCreatePages()
+
+ When /^I (?:follow|click) "([^"]*)" on the "([^"]*)"$/
+    # FeatureContext::iFollowOnThe()
+
+Given /^I should see at least "([^"]*)" record(?:|s) for each filter$/
+    # FeatureContext::iShouldSeeAtLeastRecordForEachFilter()
+
+Given /^I add "([^"]*)" comment(?:|s)$/
+    # FeatureContext::iAddComment()
+
+Given /^I wait until the page (?:loads|is loaded)$/
+    - Hold the execution until the page is/resource are completely loaded OR timeout
+    # FeatureContext::iWaitUntilThePageLoads()
+
+ Then /^(?:I )attach the local file "([^"]*)" to "([^"]*)"$/
+    - Attaches files/'file' to field with specified id|name|label|value. The file provided should just be the file name that is already present in 'files' folder
+    # FeatureContext::attachLocalFile()
+
+Given /^the results should not link to Drupal\.org$/
+    - Checks, whether the results in the apache solr search results page contain results from Drupal.org or not
+    # FeatureContext::theResultsShouldNotLinkToDrupalOrg()
+
+Given /^I should see at least "([^"]*)" most installed modules$/
+    - Compares modules from 'Most installed' block and usage stats page
+    # FeatureContext::iShouldSeeAtLeastMostInstalledModules()
+
+ When /^I follow (?:Featured providers|All providers|Organization) title post$/
+    - Function to navigate through featured or all providers list
+    # FeatureContext::iFollowFeaturedProvidersTitlePost()
+
+ When /^I create a new organization(?: for "([^"]*)"|)$/
+    # FeatureContext::iCreateANewOrganizationFor()
+
+ Then /^I should see "([^"]*)" selected for "([^"]*)"$/
+    # FeatureContext::iShouldSeeSelectedFor()
+
+ Then /^I (?:should |)see the "([^"]*)" "([^"]*)" in "([^"]*)" area$/
+    - Find given type in specific region on the page
+    # FeatureContext::iShouldSeeInArea()
+
+ Then /^I should not see the "([^"]*)" "([^"]*)" in "([^"]*)" area$/
+    # FeatureContext::iShouldNotSeeInArea()
+
+ Then /^I should see at least "([^"]*)" "([^"]*)" in power Drupal text$/
+    - people/countries/languages count appears in ...power drupal text on the homepage
+    # FeatureContext::iShouldSeeAtLeastPeopleInPowerDrupalText()
+
+Given /^I should see the following <(?:links|tabs|options)> in "([^"]*)" area$/
+    - Checks links in a homepage area
+    # FeatureContext::iShouldSeeTheFollowingLinksInArea()
+
+Given /^I should see at least "([^"]*)" "([^"]*)" in top right content area$/
+    - Checks count of links in top right content area on homepage
+    # FeatureContext::iShouldSeeAtLeastInArea()
+
+Given /^I should see the results sorted by most installed modules$/
+    - Checks if the solr search results page is sorted by 'most installed' or not
+    # FeatureContext::iShouldSeeTheResultsSortedByMostInstalledModules()
+
+Given /^I should see the results sorted by last build of the project$/
+    - Checks if the solr search results page is sorted by 'last build' or not
+    # FeatureContext::iShouldSeeTheResultsSortedByLastBuildOfTheProject()
+
+Given /^I should see the results sorted by latest release of the project$/
+    - Checks if the solr search results page is sorted by 'last release' or not
+    # FeatureContext::iShouldSeeTheResultsSortedByLatestReleaseOfTheProject()
+
+Given /^I should see at least "([^"]*)" members$/
+    - Checks if $count number of memebers were found on the page or not
+    # FeatureContext::iShouldSeeAtLeastMembers()
+
+ When /^I create(?:d|) a forum(?:| topic)$/
+    - Creates a forum and store subject, body and url
+    # FeatureContext::iCreateAForum()
+
+Given /^there is a new "([^"]*)" forum topic$/
+    # FeatureContext::thereIsANewForumTopic()
+
+Given /^there is a new promoted forum topic$/
+    # FeatureContext::thereIsANewPromotedForumTopic()
+
+Given /^I edit the "([^"]*)"$/
+    - For use with various forum topics
+    # FeatureContext::iEditThe()
+
+Given /^I am on the (?:community spotlight|forum topic) page$/
+    - Loads already saved community spotlight page
+    # FeatureContext::iAmOnTheForumPage()
+
+ Then /^I should see the (?:community spotlight|forum topic) link$/
+    - Checks whether the forum link is present
+    # FeatureContext::iShouldSeeTheForumLink()
+
+ Then /^I should see book image under Drupal books$/
+    # FeatureContext::iShouldSeeBookImageUnderDrupalBooks()
+
+Given /^I should see the summary text$/
+    # FeatureContext::iShouldSeeTheIntroductoryText()
+
+Given /^I should see at least "([^"]*)" more news links$/
+    # FeatureContext::iShouldSeeAtLeastMoreNewsLinks()
+
+ When /^I create a new branch for "([^"]*)" version$/
+    - Create a new git branch for the project
+    # FeatureContext::iCreateANewBranchForVersion()
+
+ Then /^I should see the branch in the dropdown "([^"]*)"$/
+    - To view the branch version in the provided dropdown
+    # FeatureContext::iShouldSeeTheBranchInTheDropdown()
+
+Given /^I select a branch from "([^"]*)"$/
+    - Select the branch from the given dropdown
+    # FeatureContext::iSelectABranchFrom()
+
+ When /^I create a new tag for "([^"]*)" version$/
+    - Create a new git tag for the project
+    # FeatureContext::iCreateANewTagForVersion()
+
+ Then /^I should see the tag in the dropdown "([^"]*)"$/
+    - To view the tag version in the provided dropdown
+    # FeatureContext::iShouldSeeTheTagInTheDropdown()
+
+Given /^I select a tag from "([^"]*)"$/
+    - Select the tag from the given dropdown
+    # FeatureContext::iSelectATagFrom()
+
+Given /^the release should not be published$/
+    - Check whether the current project is in published more or not
+    # FeatureContext::theReleaseShouldNotBePublished()
+
+ Then /^I should see latest forum topic in the rightside block$/
+    # FeatureContext::iShouldSeeLatestForumTopicInTheRightsideBlock()
+
+ Then /^I should see the following <values> in the dropdown "([^"]*)"$/
+    - Checks, that form field with specified id|name|label|value has the <values>
+    # FeatureContext::iShouldSeeTheFollowingValuesInTheDropdown()
+
+Given /^I should see the image of a drupal site in top middle content area$/
+    - Checks the small screenshot a drupal site is present in top middle content area
+    # FeatureContext::iShouldSeeTheImageOfADrupalSiteInArea()
+
+Given /^I should see an advertisement in top right content area$/
+    - Checks an advertisement is present in top right content area
+    # FeatureContext::iShouldSeeAnAdvertisementInTopRightContentArea()
+
+ Then /^I should see that drupal banner is linked to the home page$/
+    - Checks drupal banner in the header
+    # FeatureContext::iShouldSeeThatLhrdBannerIsLinkedToTheHomePage()
+
+Given /^I follow the first search result$/
+    - Click on the first result link on the search results page
+    # FeatureContext::iFollowTheFirstSearchResult()
+
+Given /^I (?:should |)see the results sorted in alphabetical order by project title$/
+    - Checks if the solr search results page is sorted by 'project title' or not
+    # FeatureContext::iShouldSeeTheResultsSortedInAlphabeticalOrderByProjectTitle()
+
+Given /^I (?:should |)see the results sorted in alphabetical order by project author$/
+    # FeatureContext::iShouldSeeTheResultsSortedInAlphabeticalOrderByProjectAuthor()
+
+Given /^I (?:should |)see the results sorted by the project posted date$/
+    # FeatureContext::iShouldSeeTheResultsSortedByTheProjectPostedDate()
+
+Given /^I fill in revision log message with random text$/
+    - Fills the field Revision log message with the given text or a random text
+    # FeatureContext::iFillInRevisionLogMessageWithText()
+
+Given /^I fill in revision log message with "([^"]*)"$/
+    - Fills the field Revision log message with the given text or a random text
+    # FeatureContext::iFillInRevisionLogMessageWithText()
+
+Given /^I create a book page with full html$/
+    - Create a book page with input format set to Full HTML
+    # FeatureContext::iCreateABookPageWithFullHtml()
+
+ When /^I go to the document edit page$/
+    - Navigate directly to the node edit page
+    # FeatureContext::iGoToTheDocumentEditPage()
+
+ When /^I visit the document edit page$/
+    - Navigate directly to the node edit page
+    # FeatureContext::iGoToTheDocumentEditPage()
+
+ Then /^I should see the following <links> under "([^"]*)"$/
+    - Checks whether the section has the given links under it or not
+    # FeatureContext::iShouldSeeTheFollowingLinksUnder()
+
+Given /^the current url should (?:match|be) "([^"]*)"$/
+    - Checks whether the given url is same or part of the current url of the page
+    # FeatureContext::theCurrentUrlShouldMatch()
+
+ Then /^I should see at least "([^"]*)" link(?:|s) under "([^"]*)"$/
+    - Checks for $count number of links under the given section
+    # FeatureContext::iShouldSeeAtLeastLinksUnder()
+
+ Then /^I should see "([^"]*)" recently published featured case studies in the slideshow$/
+    - Look for recently published featured case studies
+    # FeatureContext::recentlyPublishedFeaturedCaseStudy()
+
+ Then /^the case study should be one of the "([^"]*)" recently published featured case studies$/
+    - Checks whether the case study on homepage is one of the published featured case studies or not
+    # FeatureContext::theCaseStudyShouldBeOneOfTheRecentlyPublishedFeaturedCaseStudies()
+
+ Then /^I should see the organization link$/
+    - Looks for test organization link on the page
+    # FeatureContext::iShouldSeeTheOrganizationLink()
+
+ Then /^I should see "([^"]*)" as a maintainer$/
+    - Step to ensure $user is set a maintainer
+    # FeatureContext::iShouldSeeAsAMaintainer()
+
+ Then /^I should see "([^"]*)" under "([^"]*)" heading$/
+    # FeatureContext::iShouldSeeUnderHeading()
+
+ When /^I follow training organization post$/
+    # FeatureContext::iFollowTrainingOrganizationPost()
+
+ Then /^I should see the organization logo$/
+    - Looks for test organization logo
+    # FeatureContext::iShouldSeeTheOrganizationLogo()
+
+Given /^I should see at least "([^"]*)" WebAd(?:s|)$/
+    - Checks number of advertisements in the list
+    # FeatureContext::iShouldSeeAtLeastAds()
+
+ Then /^the following <fields> should be outlined in red$/
+    - Check the given table of fields are outlined in red
+    # FeatureContext::theFollowingFieldsShouldBeOutlinedInRed()
+
+ When /^I create new student job$/
+    - Creates a new change record
+    # FeatureContext::iCreateNewStudentJob()
+
+Given /^I should see the attachment$/
+    - Checks for attachment
+    # FeatureContext::iShouldSeeTheAttachment()
+
+Given /^I should see the random text for the following <fields>$/
+    - Confirms the created random text for the appropriate fields
+    # FeatureContext::iShouldSeeTheRandomTextForTheFollowingFields()
+
+ Then /^I should see change record link$/
+    - Function to confirm the created random text for the appropriate fields
+    # FeatureContext::iShouldSeeChangeRecordLink()
+
+Given /^I should see the option "([^"]*)" selected in "([^"]*)" dropdown$/
+    - Checks if the given value is default selected in the given dropdown
+    # FeatureContext::iShouldSeeTheOptionSelectedInDropdown()
+
+ Then /^I should see the random "([^"]*)" link$/
+    - Checks a random link exists for a label
+    # FeatureContext::iShouldSeeTheRandomLink()
+
+ When /^I visit the random link for "([^"]*)"$/
+    - Visits random link
+    # FeatureContext::iVisitTheRandomLinkFor()
+
+ When /^I follow "([^"]*)" tab on the top navigation$/
+    - Clicks on the link present in the navigation bar within the content region
+    # FeatureContext::iFollowTabOnTheTopNavigation()
+
+Given /^I create "([^"]*)" book page(?:s)$/
+    - Creates $count number of book pages
+    # FeatureContext::iCreateBookPages()
+
+ When /^I visit "([^"]*)" profile page$/
+    - Visit the profile page of a user
+    # FeatureContext::iVisitProfilePage()
+
+ When /^I "([^"]*)" the table header checkbox$/
+    - Select the checkbox in the table header
+    # FeatureContext::iSelectTheCheckboxInTheTableHeader()
+
+Given /^I see the link "([^"]*)"$/
+    - Identify a link
+    # FeatureContext::iSeeTheLink()
+
+Given /^I should see an image for every case study$/
+    - Checks if the page contains case study images or not
+    # FeatureContext::iShouldSeeAnImageForEveryCaseStudy()
+
+Given /^I fill in "([^"]*)" with organization name$/
+    # FeatureContext::iFillInWithOrganizationName()
+
+ Then /^I should not see the random "([^"]*)" link$/
+    # FeatureContext::iShouldNotSeeTheRandomLink()
+
+Given /^I should see the book cover image$/
+    # FeatureContext::iShouldSeeTheBookCoverImage()
+
+ When /^I click the "([^"]*)" tab$/
+    - D.o: Strip markup out of the links in administrative vertical tabs
+    # FeatureContext::iClickTheTab()
+
+Given /^I am logged in as a new user$/
+    # FeatureContext::iAmLoggedInAsANewUser()
+
+Given /^a new "([^"]*)" "([^"]*)" issue$/
+    # FeatureContext::aNewIssue()
+
+Given /^the cache is cleared$/
+    # FeatureContext::theCacheIsCleared()
+
+Given /^(?:that I|I) am at "(?P[^"]*)"$/
+    - Visit a given path, and additionally check for HTTP response code 200.
+    # FeatureContext::assertAtPath()
+
+ When /^I visit "(?P[^"]*)"$/
+    # FeatureContext::assertVisit()
+
+ When /^I click "(?P<link>[^"]*)"$/
+    # FeatureContext::assertClick()
+
+Given /^for "(?P<field>[^"]*)" I enter "(?P<value>[^"]*)"$/
+    # FeatureContext::assertEnterField()
+
+Given /^I enter "(?P<value>[^"]*)" for "(?P<field>[^"]*)"$/
+    # FeatureContext::assertEnterField()
+
+Given /^I wait for AJAX to finish$/
+    - Wait for AJAX to finish.
+    # FeatureContext::iWaitForAjaxToFinish()
+
+ When /^(?:|I )press "(?P<button>(?:[^"]|\\")*)"$/
+    - Presses button with specified id|name|title|alt|value.
+    # FeatureContext::pressButton()
+
+ When /^(?:|I )press the "(?P<button>[^"]*)" button$/
+    - Presses button with specified id|name|title|alt|value.
+    # FeatureContext::pressButton()
+
+Given /^(?:|I )press the "([^"]*)" key in the "([^"]*)" field$/
+    # FeatureContext::pressKey()
+
+ Then /^I should see the link "(?P<link>[^"]*)"$/
+    # FeatureContext::assertLinkVisible()
+
+ Then /^I should not see the link "(?P<link>[^"]*)"$/
+    # FeatureContext::assertNotLinkVisible()
+
+ Then /^I (?:|should )see the heading "(?P<heading>[^"]*)"$/
+    # FeatureContext::assertHeading()
+
+ Then /^I (?:|should )not see the heading "(?P<heading>[^"]*)"$/
+    # FeatureContext::assertNotHeading()
+
+ Then /^I should see the heading "(?P<heading>[^"]*)" in the "(?P<region>[^"]*)"(?:| region)$/
+    - Find a heading in a specific region.
+    # FeatureContext::assertRegionHeading()
+
+ Then /^I should see the "(?P<heading>[^"]*)" heading in the "(?P<region>[^"]*)"(?:| region)$/
+    - Find a heading in a specific region.
+    # FeatureContext::assertRegionHeading()
+
+ When /^I (?:follow|click) "(?P<link>[^"]*)" in the "(?P<region>[^"]*)"(?:| region)$/
+    # FeatureContext::assertRegionLinkFollow()
+
+ Then /^I should see the link "(?P<link>[^"]*)" in the "(?P<region>[^"]*)"(?:| region)$/
+    # FeatureContext::assertLinkRegion()
+
+ Then /^I should not see the link "(?P<link>[^"]*)" in the "(?P<region>[^"]*)"(?:| region)$/
+    # FeatureContext::assertNotLinkRegion()
+
+ Then /^I should see (?:the text |)"(?P<text>[^"]*)" in the "(?P<region>[^"]*)"(?:| region)$/
+    # FeatureContext::assertRegionText()
+
+ Then /^I should not see (?:the text |)"(?P<text>[^"]*)" in the "(?P<region>[^"]*)"(?:| region)$/
+    # FeatureContext::assertNotRegionText()
+
+Given /^I press "(?P<button>[^"]*)" in the "(?P<region>[^"]*)"(?:| region)$/
+    - Checks, if a button with id|name|title|alt|value exists or not and pressess the same
+    # FeatureContext::assertRegionPressButton()
+
+Given /^(?:|I )fill in "(?P<value>(?:[^"]|\\")*)" for "(?P<field>(?:[^"]|\\")*)" in the "(?P<region>[^"]*)"(?:| region)$/
+    - Fills in a form field with id|name|title|alt|value in the specified region.
+    # FeatureContext::regionFillField()
+
+Given /^(?:|I )fill in "(?P<field>(?:[^"]|\\")*)" with "(?P<value>(?:[^"]|\\")*)" in the "(?P<region>[^"]*)"(?:| region)$/
+    - Fills in a form field with id|name|title|alt|value in the specified region.
+    # FeatureContext::regionFillField()
+
+ Then /^(?:I|I should) see the text "(?P<text>[^"]*)"$/
+    # FeatureContext::assertTextVisible()
+
+ Then /^I should not see the text "(?P<text>[^"]*)"$/
+    # FeatureContext::assertNotTextVisible()
+
+ Then /^I should get a "(?P<code>[^"]*)" HTTP response$/
+    # FeatureContext::assertHttpResponse()
+
+ Then /^I should not get a "(?P<code>[^"]*)" HTTP response$/
+    # FeatureContext::assertNotHttpResponse()
+
+Given /^I check the box "(?P<checkbox>[^"]*)"$/
+    # FeatureContext::assertCheckBox()
+
+Given /^I uncheck the box "(?P<checkbox>[^"]*)"$/
+    # FeatureContext::assertUncheckBox()
+
+ When /^I select the radio button "(?P<label>[^"]*)" with the id "(?P<id>[^"]*)"$/
+    # FeatureContext::assertSelectRadioById()
+
+ When /^I select the radio button "(?P<label>[^"]*)"$/
+    # FeatureContext::assertSelectRadioById()
+
+Given /^I am an anonymous user$/
+    # FeatureContext::assertAnonymousUser()
+
+Given /^I am not logged in$/
+    # FeatureContext::assertAnonymousUser()
+
+Given /^I am logged in as a user with the "(?P<role>[^"]*)" role$/
+    - Creates and authenticates a user with the given role via Drush.
+    # FeatureContext::assertAuthenticatedByRole()
+
+Given /^I am logged in as "(?P<name>[^"]*)"$/
+    # FeatureContext::assertLoggedInByName()
+
+Given /^I am logged in as a user with the "(?P<permission>[^"]*)" permission(?:|s)$/
+    # FeatureContext::assertLoggedInWithPermissions()
+
+Given /^I click "(?P<link>[^"]*)" in the "(?P<row_text>[^"]*)" row$/
+    - Attempts to find a link in a table row containing giving text. This is for
+    # FeatureContext::assertClickInTableRow()
+
+Given /^the cache has been cleared$/
+    # FeatureContext::assertCacheClear()
+
+Given /^I run cron$/
+    # FeatureContext::assertCron()
+
+Given /^I am viewing (?:a|an) "(?P<type>[^"]*)" node with the title "(?P<title>[^"]*)"$/
+    # FeatureContext::createNode()
+
+Given /^(?:a|an) "(?P<type>[^"]*)" node with the title "(?P<title>[^"]*)"$/
+    # FeatureContext::createNode()
+
+Given /^I am viewing my "(?P<type>[^"]*)" node with the title "(?P<title>[^"]*)"$/
+    # FeatureContext::createMyNode()
+
+Given /^"(?P<type>[^"]*)" nodes:$/
+    # FeatureContext::createNodes()
+
+Given /^I am viewing (?:a|an) "(?P<type>[^"]*)" node:$/
+    # FeatureContext::assertViewingNode()
+
+ Then /^I should be able to edit (?:a|an) "([^"]*)" node$/
+    - Asserts that a given node type is editable.
+    # FeatureContext::assertEditNodeOfType()
+
+Given /^I am viewing (?:a|an) "(?P<vocabulary>[^"]*)" term with the name "(?P<name>[^"]*)"$/
+    # FeatureContext::createTerm()
+
+Given /^(?:a|an) "(?P<vocabulary>[^"]*)" term with the name "(?P<name>[^"]*)"$/
+    # FeatureContext::createTerm()
+
+Given /^users:$/
+    - Creates multiple users.
+    # FeatureContext::createUsers()
+
+Given /^"(?P<vocabulary>[^"]*)" terms:$/
+    # FeatureContext::createTerms()
+
+ Then /^I should see the error message(?:| containing) "([^"]*)"$/
+    - Checks if the current page contains the given error message
+    # FeatureContext::assertErrorVisible()
+
+ Then /^I should see the following <error messages>$/
+    - Checks if the current page contains the given set of error messages
+    # FeatureContext::assertMultipleErrors()
+
+Given /^I should not see the error message(?:| containing) "([^"]*)"$/
+    - Checks if the current page does not contain the given error message
+    # FeatureContext::assertNotErrorVisible()
+
+ Then /^I should not see the following <error messages>$/
+    - Checks if the current page does not contain the given set error messages
+    # FeatureContext::assertNotMultipleErrors()
+
+ Then /^I should see the success message(?:| containing) "([^"]*)"$/
+    - Checks if the current page contains the given success message
+    # FeatureContext::assertSuccessMessage()
+
+ Then /^I should see the following <success messages>$/
+    - Checks if the current page contains the given set of success messages
+    # FeatureContext::assertMultipleSuccessMessage()
+
+Given /^I should not see the success message(?:| containing) "([^"]*)"$/
+    - Checks if the current page does not contain the given set of success message
+    # FeatureContext::assertNotSuccessMessage()
+
+ Then /^I should not see the following <success messages>$/
+    - Checks if the current page does not contain the given set of success messages
+    # FeatureContext::assertNotMultipleSuccessMessage()
+
+ Then /^I should see the warning message(?:| containing) "([^"]*)"$/
+    - Checks if the current page contains the given warning message
+    # FeatureContext::assertWarningMessage()
+
+ Then /^I should see the following <warning messages>$/
+    - Checks if the current page contains the given set of warning messages
+    # FeatureContext::assertMultipleWarningMessage()
+
+Given /^I should not see the warning message(?:| containing) "([^"]*)"$/
+    - Checks if the current page does not contain the given set of warning message
+    # FeatureContext::assertNotWarningMessage()
+
+ Then /^I should not see the following <warning messages>$/
+    - Checks if the current page does not contain the given set of warning messages
+    # FeatureContext::assertNotMultipleWarningMessage()
+
+ Then /^I should see the message(?:| containing) "([^"]*)"$/
+    - Checks if the current page contain the given message
+    # FeatureContext::assertMessage()
+
+ Then /^I should not see the message(?:| containing) "([^"]*)"$/
+    - Checks if the current page does not contain the given message
+    # FeatureContext::assertNotMessage()
+
+Given /^I run drush "(?P<command>[^"]*)"$/
+    # FeatureContext::assertDrushCommand()
+
+Given /^I run drush "(?P<command>[^"]*)" "(?P<arguments>(?:[^"]|\\")*)"$/
+    # FeatureContext::assertDrushCommandWithArgument()
+
+ Then /^drush output should contain "(?P<output>[^"]*)"$/
+    # FeatureContext::assertDrushOutput()
+
+ Then /^drush output should not contain "(?P<output>[^"]*)"$/
+    # FeatureContext::drushOutputShouldNotContain()
+
+ Then /^(?:|I )break$/
+    - Pauses the scenario until the user presses a key. Useful when debugging a scenario.
+    # FeatureContext::iPutABreakpoint()
+
+Given /^(?:|I )am on (?:|the )homepage$/
+    - Opens homepage.
+    # FeatureContext::iAmOnHomepage()
+
+ When /^(?:|I )go to (?:|the )homepage$/
+    - Opens homepage.
+    # FeatureContext::iAmOnHomepage()
+
+Given /^(?:|I )am on "(?P<page>[^"]+)"$/
+    - Opens specified page.
+    # FeatureContext::visit()
+
+ When /^(?:|I )go to "(?P<page>[^"]+)"$/
+    - Opens specified page.
+    # FeatureContext::visit()
+
+ When /^(?:|I )reload the page$/
+    - Reloads current page.
+    # FeatureContext::reload()
+
+ When /^(?:|I )move backward one page$/
+    - Moves backward one page in history.
+    # FeatureContext::back()
+
+ When /^(?:|I )move forward one page$/
+    - Moves forward one page in history
+    # FeatureContext::forward()
+
+ When /^(?:|I )follow "(?P<link>(?:[^"]|\\")*)"$/
+    - Clicks link with specified id|title|alt|text.
+    # FeatureContext::clickLink()
+
+ When /^(?:|I )fill in "(?P<field>(?:[^"]|\\")*)" with "(?P<value>(?:[^"]|\\")*)"$/
+    - Fills in form field with specified id|name|label|value.
+    # FeatureContext::fillField()
+
+ When /^(?:|I )fill in "(?P<field>(?:[^"]|\\")*)" with:$/
+    - Fills in form field with specified id|name|label|value.
+    # FeatureContext::fillField()
+
+ When /^(?:|I )fill in "(?P<value>(?:[^"]|\\")*)" for "(?P<field>(?:[^"]|\\")*)"$/
+    - Fills in form field with specified id|name|label|value.
+    # FeatureContext::fillField()
+
+ When /^(?:|I )fill in the following:$/
+    - Fills in form fields with provided table.
+    # FeatureContext::fillFields()
+
+ When /^(?:|I )select "(?P<option>(?:[^"]|\\")*)" from "(?P<select>(?:[^"]|\\")*)"$/
+    - Selects option in select field with specified id|name|label|value.
+    # FeatureContext::selectOption()
+
+ When /^(?:|I )additionally select "(?P<option>(?:[^"]|\\")*)" from "(?P<select>(?:[^"]|\\")*)"$/
+    - Selects additional option in select field with specified id|name|label|value.
+    # FeatureContext::additionallySelectOption()
+
+ When /^(?:|I )check "(?P<option>(?:[^"]|\\")*)"$/
+    - Checks checkbox with specified id|name|label|value.
+    # FeatureContext::checkOption()
+
+ When /^(?:|I )uncheck "(?P<option>(?:[^"]|\\")*)"$/
+    - Unchecks checkbox with specified id|name|label|value.
+    # FeatureContext::uncheckOption()
+
+ When /^(?:|I )attach the file "(?P[^"]*)" to "(?P<field>(?:[^"]|\\")*)"$/
+    - Attaches file to field with specified id|name|label|value.
+    # FeatureContext::attachFileToField()
+
+ Then /^(?:|I )should be on "(?P<page>[^"]+)"$/
+    - Checks, that current page PATH is equal to specified.
+    # FeatureContext::assertPageAddress()
+
+ Then /^(?:|I )should be on (?:|the )homepage$/
+    - Checks, that current page is the homepage.
+    # FeatureContext::assertHomepage()
+
+ Then /^the (?i)url(?-i) should match (?P<pattern>"(?:[^"]|\\")*")$/
+    - Checks, that current page PATH matches regular expression.
+    # FeatureContext::assertUrlRegExp()
+
+ Then /^the response status code should be (?P<code>\d+)$/
+    - Checks, that current page response status is equal to specified.
+    # FeatureContext::assertResponseStatus()
+
+ Then /^the response status code should not be (?P<code>\d+)$/
+    - Checks, that current page response status is not equal to specified.
+    # FeatureContext::assertResponseStatusIsNot()
+
+ Then /^(?:|I )should see "(?P<text>(?:[^"]|\\")*)"$/
+    - Checks, that page contains specified text.
+    # FeatureContext::assertPageContainsText()
+
+ Then /^(?:|I )should not see "(?P<text>(?:[^"]|\\")*)"$/
+    - Checks, that page doesn't contain specified text.
+    # FeatureContext::assertPageNotContainsText()
+
+ Then /^(?:|I )should see text matching (?P<pattern>"(?:[^"]|\\")*")$/
+    - Checks, that page contains text matching specified pattern.
+    # FeatureContext::assertPageMatchesText()
+
+ Then /^(?:|I )should not see text matching (?P<pattern>"(?:[^"]|\\")*")$/
+    - Checks, that page doesn't contain text matching specified pattern.
+    # FeatureContext::assertPageNotMatchesText()
+
+ Then /^the response should contain "(?P<text>(?:[^"]|\\")*)"$/
+    - Checks, that HTML response contains specified string.
+    # FeatureContext::assertResponseContains()
+
+ Then /^the response should not contain "(?P<text>(?:[^"]|\\")*)"$/
+    - Checks, that HTML response doesn't contain specified string.
+    # FeatureContext::assertResponseNotContains()
+
+ Then /^(?:|I )should see "(?P<text>(?:[^"]|\\")*)" in the "(?P<element>[^"]*)" element$/
+    - Checks, that element with specified CSS contains specified text.
+    # FeatureContext::assertElementContainsText()
+
+ Then /^(?:|I )should not see "(?P<text>(?:[^"]|\\")*)" in the "(?P<element>[^"]*)" element$/
+    - Checks, that element with specified CSS doesn't contain specified text.
+    # FeatureContext::assertElementNotContainsText()
+
+ Then /^the "(?P<element>[^"]*)" element should contain "(?P<value>(?:[^"]|\\")*)"$/
+    - Checks, that element with specified CSS contains specified HTML.
+    # FeatureContext::assertElementContains()
+
+ Then /^the "(?P<element>[^"]*)" element should not contain "(?P<value>(?:[^"]|\\")*)"$/
+    - Checks, that element with specified CSS doesn't contain specified HTML.
+    # FeatureContext::assertElementNotContains()
+
+ Then /^(?:|I )should see an? "(?P<element>[^"]*)" element$/
+    - Checks, that element with specified CSS exists on page.
+    # FeatureContext::assertElementOnPage()
+
+ Then /^(?:|I )should not see an? "(?P<element>[^"]*)" element$/
+    - Checks, that element with specified CSS doesn't exist on page.
+    # FeatureContext::assertElementNotOnPage()
+
+ Then /^the "(?P<field>(?:[^"]|\\")*)" field should contain "(?P<value>(?:[^"]|\\")*)"$/
+    - Checks, that form field with specified id|name|label|value has specified value.
+    # FeatureContext::assertFieldContains()
+
+ Then /^the "(?P<field>(?:[^"]|\\")*)" field should not contain "(?P<value>(?:[^"]|\\")*)"$/
+    - Checks, that form field with specified id|name|label|value doesn't have specified value.
+    # FeatureContext::assertFieldNotContains()
+
+ Then /^the "(?P<checkbox>(?:[^"]|\\")*)" checkbox should be checked$/
+    - Checks, that checkbox with specified in|name|label|value is checked.
+    # FeatureContext::assertCheckboxChecked()
+
+ Then /^the checkbox "(?P<checkbox>(?:[^"]|\\")*)" (?:is|should be) checked$/
+    - Checks, that checkbox with specified in|name|label|value is checked.
+    # FeatureContext::assertCheckboxChecked()
+
+ Then /^the "(?P<checkbox>(?:[^"]|\\")*)" checkbox should not be checked$/
+    - Checks, that checkbox with specified in|name|label|value is unchecked.
+    # FeatureContext::assertCheckboxNotChecked()
+
+ Then /^the checkbox "(?P<checkbox>(?:[^"]|\\")*)" should (?:be unchecked|not be checked)$/
+    - Checks, that checkbox with specified in|name|label|value is unchecked.
+    # FeatureContext::assertCheckboxNotChecked()
+
+ Then /^the checkbox "(?P<checkbox>(?:[^"]|\\")*)" is (?:unchecked|not checked)$/
+    - Checks, that checkbox with specified in|name|label|value is unchecked.
+    # FeatureContext::assertCheckboxNotChecked()
+
+ Then /^(?:|I )should see (?P<num>\d+) "(?P<element>[^"]*)" elements?$/
+    - Checks, that (?P<num>\d+) CSS elements exist on the page
+    # FeatureContext::assertNumElements()
+
+ Then /^print current URL$/
+    - Prints current URL to console.
+    # FeatureContext::printCurrentUrl()
+
+ Then /^print last response$/
+    - Prints last response to console.
+    # FeatureContext::printLastResponse()
+
+ Then /^show last response$/
+    - Opens last response content in browser.
+    # FeatureContext::showLastResponse()
+
+ Then /^(\d+) emails? should be sent:$/i
+    # MaillogBehatContext::emailsWereSent()
+
