@@ -1,8 +1,8 @@
 diff --git a/sites/all/modules/contrib/workflow/includes/Entity/WorkflowTransition.php b/sites/all/modules/contrib/workflow/includes/Entity/WorkflowTransition.php
-index c06ceab..34193bd 100644
+index 0ed801e..9ec8456 100644
 --- a/sites/all/modules/contrib/workflow/includes/Entity/WorkflowTransition.php
 +++ b/sites/all/modules/contrib/workflow/includes/Entity/WorkflowTransition.php
-@@ -272,7 +272,7 @@ class WorkflowTransition extends Entity {
+@@ -272,13 +272,13 @@ class WorkflowTransition extends Entity {
      $entity_type = $this->entity_type;
      $entity_id = $this->entity_id;
      $field_name = $this->field_name;
@@ -11,10 +11,26 @@ index c06ceab..34193bd 100644
  
      // Make sure $force is set in the transition, too.
      if ($force) {
+       $this->force($force);
+     }
+-    $force = $this->isForced();
++    //$force = $this->isForced();
+ 
+     // Store the transition, so it can be easily fetched later on.
+     // Store in an array, to prepare for multiple workflow_fields per entity.
 diff --git a/sites/all/modules/contrib/workflow/includes/Form/WorkflowTransitionForm.php b/sites/all/modules/contrib/workflow/includes/Form/WorkflowTransitionForm.php
-index 371b106..1a865f9 100644
+index f01f8d4..1a865f9 100644
 --- a/sites/all/modules/contrib/workflow/includes/Form/WorkflowTransitionForm.php
 +++ b/sites/all/modules/contrib/workflow/includes/Form/WorkflowTransitionForm.php
+@@ -179,7 +179,7 @@ class WorkflowTransitionForm { // extends FormBase {
+     if (!isset($form_state['build_info']['base_form_id'])) {
+       // Strange: on node form, the base_form_id is node_form,
+       // but on term form, it is not set.
+-      // In both cases, it is OK. 
++      // In both cases, it is OK.
+     }
+     else {
+       if ($form_state['build_info']['base_form_id'] == 'workflow_transition_wrapper_form') {
 @@ -268,7 +268,7 @@ class WorkflowTransitionForm { // extends FormBase {
  
      // Show state formatter before the rest of the form,
